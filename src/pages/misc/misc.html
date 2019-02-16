@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Misc Refunds</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="editData()">
+                <ion-icon name="md-add-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+            {{item.desc }}
+            <div class="item-note" item-end>
+                {{item.amount | currency:'USD'}} 
+            </div>
+        </button>
+    </ion-list>
+</ion-content>

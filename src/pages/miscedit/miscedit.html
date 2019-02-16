@@ -1,0 +1,35 @@
+<ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Misc - Edit</ion-title>
+            <ion-buttons end>
+                <button ion-button icon-only (click)="saveData()">
+                    <ion-icon name="md-checkmark-circle"></ion-icon>
+                </button>
+                <button *ngIf="rowId!=0" ion-button icon-only (click)="deleteData()">
+                        <ion-icon name="md-trash"></ion-icon>
+                </button>
+            </ion-buttons>
+        </ion-navbar>
+    </ion-header>
+    
+    <ion-content padding>
+        <ion-list>
+            <ion-list-header>
+                Transaction
+            </ion-list-header>
+            <ion-item>
+                <ion-label floating>Amount</ion-label>
+                <ion-input [(ngModel)]="amount" type="number"></ion-input>
+            </ion-item>
+    
+            <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-input [(ngModel)]="desc" type="text"></ion-input>
+            </ion-item>
+    
+        </ion-list>
+    </ion-content>
+    

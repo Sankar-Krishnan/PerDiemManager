@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Dashboard - Reports</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-group>
+        <ion-item-divider color="light">Summary</ion-item-divider>
+        <ion-item>
+            <label>Total Reloads</label>
+            <label item-end>{{totalReloads | currency:'USD'}}</label>
+        </ion-item>
+        <ion-item>
+            <label>Total Days</label>
+            <label item-end>{{totalDays}} Days</label>
+        </ion-item>
+        <ion-item>
+            <label>Eligible</label>
+            <label item-end>{{totalEligible | currency:'USD'}}</label>
+        </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="light">Withdrawls</ion-item-divider>
+        <ion-item>
+            <label>Total USD Withdrawls</label>
+            <label item-end>{{totalUSDWithdrawls | currency:'USD'}}</label>
+        </ion-item>
+        <ion-item>
+            <label>Total MXN Withdrawls</label>
+            <label item-end>{{totalMXNWithdrawls | currency:'MXN'}}</label>
+        </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="light">Refunds</ion-item-divider>
+        <ion-item>
+            <label>Conversion Charges</label>
+            <label item-end>{{conversionCharges | currency:'USD'}}</label>
+        </ion-item>
+        <ion-item>
+            <label>Misc</label>
+            <label item-end>{{miscRefunds | currency:'USD'}}</label>
+        </ion-item>
+        <ion-item>
+            <label>Total</label>
+            <label item-end>{{totalRefunds | currency:'USD'}}</label>
+        </ion-item>
+    </ion-item-group>
+</ion-content>

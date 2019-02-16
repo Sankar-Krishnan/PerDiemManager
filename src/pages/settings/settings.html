@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Settings</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="saveData()">
+                <ion-icon name="md-checkmark-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label item-start>Start Date</ion-label>
+            <div class="item-note" item-end>
+                <ion-datetime [(ngModel)]="startDate" displayFormat="DD-MMM-YYYY" pickerFormat="DD MMM YYYY"></ion-datetime>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label item-start>Per-Diem</ion-label>
+            <ion-input class="item-note" item-end [(ngModel)]="perdiem" type="number" end></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
